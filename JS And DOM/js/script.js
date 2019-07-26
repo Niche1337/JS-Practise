@@ -28,6 +28,18 @@ const listUL = listDiv.querySelector("ul");
 
 //event.target.tagName
 
+const attachListItemButtons = li => {
+  let up = document.createElement('button');
+  up.className = 'Up';
+  up.textContent = 'Up';
+  let down = document.createElement('button');
+  down.className = 'Down';
+  down.textContent = 'Down';
+  let remove = document.createElement('button');
+  remove.className = 'Remove';
+  remove.textContent = 'Remove';
+};
+
 listUL.addEventListener("click", event => {
     if (event.target.tagName == "BUTTON") {
         // event.target.textContent = event.target.textContent.toUpperCase();
